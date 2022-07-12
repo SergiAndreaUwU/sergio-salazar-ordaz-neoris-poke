@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import PokemonSearcher from './components/PokemonSearcher';
+
+import react from "react"
 
 function App() {
+
+  const [isLoaded,setIsLoaded]=react.useState(false)
+
+  setTimeout(()=>{
+    setIsLoaded(true)
+  },1000)
+  react.useEffect(()=>{
+ 
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <PokemonSearcher/>
+      {isLoaded && <><div className='card'>#</div><div className='card'>#</div><div className='card'>#</div><div className='card'>#</div><div className='bigCard'>#</div></>}
+      <h2>Listado de Pokemon</h2>
+      <button className='primary'>Siguiente</button>
+      <button className='primary'>Atras</button>
     </div>
   );
 }

@@ -27,12 +27,18 @@
 }
 
 .primary:disabled{
-  background-color: rgb(29, 133, 245);
+  background-color: #73b5fc !important;
+  cursor:initial;
+}
+
+.primary:active{
+  background-color: black;
   cursor:initial;
 }
 
 .card{
   width: 48%;
+  height: 48%;
   cursor: pointer;
   display: flex;
 
@@ -45,7 +51,7 @@
   margin-left: 2%;
 }
 
-.card:nth-child(3), .card:last-child{
+.card:nth-child(3), .card:nth-child(4){
   margin-top: 2%;
 }
 

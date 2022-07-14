@@ -12,35 +12,25 @@
 
 .searchBarContainer{
     grid-area: search-bar;
-    background-color: red;
-    border: 1px solid red;
 
 }
 
 .cardListContainer{
     grid-area: card-list;
-    background-color: blue;
-    border: 1px solid red;
 }
 
 .selectedCardContainer{
     grid-area: selected-card;
-    background-color: aqua;
     padding-left: 20%;
-    border: 1px solid red;
 }
 
 .backwardsButtonContainer{
     grid-area: backwards-button;
-    background-color: purple;
     align-self: flex-end;
-    border: 1px solid red;
 }
 
 .forwardsButtonContainer{
     grid-area: forwards-button;
-    background-color: gray;
     align-self: flex-end;
     justify-self: end;
-    border: 1px solid red;
 }

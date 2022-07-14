@@ -27,13 +27,12 @@
 }
 
 .primary:disabled{
-  background-color: #53a2f7;
+  background-color: rgb(29, 133, 245);
   cursor:initial;
 }
 
 .card{
-  width: 49%;
-  background-color: aqua;
+  width: 48%;
   cursor: pointer;
   display: flex;
 
@@ -51,5 +50,6 @@
 }
 
 .card:hover{
-  background-color: rgba(0, 140, 255, 0.699);
+  background-color: rgba(0, 140, 255, 0.699) !important
 }
+

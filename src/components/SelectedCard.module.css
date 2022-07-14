@@ -2,7 +2,7 @@
 .selectedCard{
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+    border: 1px solid black;
     display: flex;
     background-color: gray;
 }
@@ -10,7 +10,6 @@
 .selectedCardContainer{
     width: 90%;
     height: 95%;
-    border: 1px solid blue;
     margin: auto;
     display: flex;
     flex-direction: column;

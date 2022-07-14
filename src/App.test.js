@@ -1,11 +1,11 @@
 /* eslint-disable testing-library/no-node-access */
 /* eslint-disable testing-library/no-container */
-import { findByText, render, screen,waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
 it('Renders a div with "cardList" className', () => {
   const { container } = render(<App/>)
-  expect(container.getElementsByClassName('card-list').length).toBe(1);
+  expect(container.getElementsByClassName('cardList').length).toBe(1);
 });
 
 it('Renders a div with at least one "card" className', async() => {
@@ -17,7 +17,7 @@ it('Renders a div with at least one "card" className', async() => {
 it('Renders correct title', async() => {
   render(<App />);
   const title = await screen.findByText("Listado de Pokemon");
-  expect(title).toContainHTML("h2")
+  expect(title).toContainHTML("h1")
 });
 
 it('Renders 4 divs with "card" className', async() => {

@@ -1,0 +1,41 @@
+.pokemonSearcherContainer{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 8fr 1.5fr;
+    grid-template-areas: "search-bar ."
+    "card-list selected-card"
+    "backwards-button forwards-button";
+    
+}
+
+.searchBarContainer{
+    grid-area: search-bar;
+    background-color: red;
+
+}
+
+.cardListContainer{
+    grid-area: card-list;
+    background-color: blue;
+
+}
+
+.selectedCardContainer{
+    grid-area: selected-card;
+    background-color: aqua;
+    padding-left: 20%;
+}
+
+.backwardsButtonContainer{
+    grid-area: backwards-button;
+    background-color: purple;
+    align-self: flex-end;
+}
+
+.forwardsButtonContainer{
+    grid-area: forwards-button;
+    background-color: gray;
+    align-self: flex-end;
+    justify-self: end;
+}

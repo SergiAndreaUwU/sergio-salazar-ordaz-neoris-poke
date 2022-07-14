@@ -1,10 +1,17 @@
-import styles from "./CardList.module.css"
+import styles from "./CardList.module.css";
 import Card from "./Card";
 
-const CardList = () => {
-    return <div className={styles.cardList}>
-        {[1,2,3,4].map(el=><Card/>)}
-    </div>;
-}
- 
+const CardList = ({ list, callbackSetSelectedPokemon }) => {
+  return (
+    <div className={styles.cardList}>
+      {list.map((element) => (
+        <Card
+          callbackSetSelectedPokemon={callbackSetSelectedPokemon}
+          element={element}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default CardList;

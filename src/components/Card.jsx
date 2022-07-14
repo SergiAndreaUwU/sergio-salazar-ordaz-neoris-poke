@@ -1,10 +1,9 @@
-import styles from "./Card.module.css";
-import NotFoundIcon from "../icons/NotFoundIcon";
 import PokemonImage from "../icons/PokemonImage"
 
-const Card = (props) => {
+const Card = ({element,callbackSetSelectedPokemon}) => {
+
   return (
-    <div className={styles.card}>
+    <div className="card" onClick={()=>{callbackSetSelectedPokemon(element)}} >
       <div
         style={{
           width: "80%",
@@ -14,15 +13,16 @@ const Card = (props) => {
           flexDirection: "column",
           flexWrap: "nowrap",
           textAlign: "center",
+          fontSize:"2rem"
         }}
       >
         <div
           style={{ flexBasis: "70%", border: "1px solid red", display: "flex",backgroundColor:"#FFFFFF" }}
         >
-          <PokemonImage/>
+          <PokemonImage src={element.image}/>
         </div>
-        <div style={{ flexBasis: "15%" }}>id</div>
-        <div style={{ flexBasis: "15%" }}>name</div>
+        <div style={{ flexBasis: "15%" }}># {element.id}</div>
+        <div style={{ flexBasis: "15%" }}>{element.name}</div>
       </div>
     </div>
   );

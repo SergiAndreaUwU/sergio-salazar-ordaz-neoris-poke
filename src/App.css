@@ -1,6 +1,7 @@
 .App {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
   background: white;
   background-image: radial-gradient(rgb(145, 145, 145) 1px, transparent 0);
   background-size: 40px 40px;
@@ -10,6 +11,8 @@
 .App-container {
   padding-left: 10vw;
   padding-right: 10vw;
+  width: 80vw;
+  height: calc(100vh - 60px);
 }
 
 .primary {
@@ -21,4 +24,32 @@
 
   padding: 10px 60px 10px 60px;
 
+}
+
+.primary:disabled{
+  background-color: #53a2f7;
+  cursor:initial;
+}
+
+.card{
+  width: 49%;
+  background-color: aqua;
+  cursor: pointer;
+  display: flex;
+
+  -webkit-transition: 0.15s;
+  transition: 0.15s ease;
+
+}
+
+.card:nth-child(2n){
+  margin-left: 2%;
+}
+
+.card:nth-child(3), .card:last-child{
+  margin-top: 2%;
+}
+
+.card:hover{
+  background-color: rgba(0, 140, 255, 0.699);
 }

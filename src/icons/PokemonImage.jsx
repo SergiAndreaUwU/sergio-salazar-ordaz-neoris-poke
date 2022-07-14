@@ -2,7 +2,7 @@ const PokemonImage = ({
   src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrgu4a7W_OM8LmAuN7Prk8dzWXm7PVB_FmA&usqp=CAU",
   width = "8.39vh",
   height = "9vh",
-  backgroundSize = "cover",
+  backgroundSize = "contain",
 }) => {
   return (
     <div
@@ -10,7 +10,7 @@ const PokemonImage = ({
         margin: "auto",
         height,
         width,
-        background: `url(${src}}) gray`,
+        backgroundImage:`url(${src})`,
         backgroundRepeat: "no-repeat",
         backgroundSize,
       }}

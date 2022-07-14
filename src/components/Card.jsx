@@ -1,9 +1,9 @@
 import PokemonImage from "../icons/PokemonImage"
 
-const Card = ({element,callbackSetSelectedPokemon}) => {
+const Card = ({element,callbackSetSelectedPokemon,selectedPokemon}) => {
 
   return (
-    <div className="card" onClick={()=>{callbackSetSelectedPokemon(element)}} >
+    <div className="card" style={{backgroundColor:selectedPokemon.id===element.id && "gray"}} onClick={()=>{callbackSetSelectedPokemon(element)}} >
       <div
         style={{
           width: "80%",

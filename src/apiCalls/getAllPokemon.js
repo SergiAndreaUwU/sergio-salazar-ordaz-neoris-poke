@@ -2,7 +2,7 @@ import axios from "axios";
 
 function getAllPokemon() {
   return axios
-    .get("https://pokeapi.co/api/v2/pokemon/", {
+    .get("https://pokeapi.co/api/v2/pokemon/?limit=3000", {
       validateStatus: function (status) {
         return status < 500;
       },

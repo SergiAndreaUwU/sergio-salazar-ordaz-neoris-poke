@@ -48,10 +48,10 @@ const PokemonSearcher = () => {
             sprites,
             image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`,
             moves: `${moveNames.reduce(
-              (prevName, currentName) => prevName + ", " + currentName,""
+              (prevName, currentName) => prevName? prevName+ ", " + currentName : currentName,""
             )}`,
             types: `${typeNames.reduce(
-              (prevName, currentName) => (prevName + ", " + currentName),""
+              (prevName, currentName) => (prevName? prevName+ ", " + currentName : currentName),""
             )}`,
             weight: pokemon.weight/10+"kg",
           });

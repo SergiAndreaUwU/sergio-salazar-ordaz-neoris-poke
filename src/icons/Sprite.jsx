@@ -7,9 +7,9 @@ const Sprite = ({src=""}) => {
         borderRadius: "50%",
         height: "40px",
         width: "40px",
-        background: `url(${src}}) gray`,
+        backgroundImage:`url(${src})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize:"cover",
+        backgroundSize:"contain",
       }}
     >
     </div>

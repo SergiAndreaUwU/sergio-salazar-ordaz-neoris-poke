@@ -6,6 +6,7 @@ const CardList = ({ list, callbackSetSelectedPokemon, selectedPokemon }) => {
     <div className={styles.cardList}>
       {list.map((element) => (
         <Card
+          key={element.name}
           callbackSetSelectedPokemon={callbackSetSelectedPokemon}
           element={element}
           selectedPokemon={selectedPokemon}

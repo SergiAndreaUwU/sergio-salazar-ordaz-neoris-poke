@@ -27,7 +27,6 @@ const PokemonSearcher = () => {
   const loadPokemon=(pokemonNames)=>{
     return new Promise(async(resolve,reject)=>{
       const pokemonInfoList = [];
-      debugger
       for(let pokemon of pokemonNames){
         const res = await getPokemonByName(pokemon.name);
         if (res.status === 200) {
@@ -71,13 +70,10 @@ const PokemonSearcher = () => {
       const pokemonNameToSearch=query.toLowerCase();
       const res=pokemonFullList.filter(pokemon=>pokemon.name.toLowerCase().includes(pokemonNameToSearch))
       setFilteredPokemonCount(res.length)
-      console.log(res)
       setFilteredPokemonNames(res)
       setFilteredPage(0)
       loadFilteredPokemonList(res)
       setLoaded(true)
-      debugger
-      debugger
     }, 500);
     return () => clearTimeout(timeOutId);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -86,9 +82,7 @@ const PokemonSearcher = () => {
   const loadFilteredPokemonList = async (pokemonNames,filteredPage=0) => {
     const pokemonToShow=pokemonNames.slice(filteredPage*4,(filteredPage*4)+4)
     const pokemonInfoList = await loadPokemon(pokemonToShow)
-    debugger
     setPokemonFilteredList(pokemonInfoList)
-    debugger
 
   }
 
@@ -143,11 +137,9 @@ const PokemonSearcher = () => {
 
   useEffect(()=>{
     loadPokemonList(page)
-
   },[page])
 
   useEffect(()=>{
-    debugger
     loadFilteredPokemonList(filteredPokemonNames,filteredPage)
 
   },[filteredPage])

@@ -45,7 +45,7 @@ const SelectedCard = ({selectedPokemon}) => {
             }}
           >
             {selectedPokemon?.sprites?.map((el, index) => {
-              if (index <10) return <Sprite src={el}/>;
+              if (index <10) return <Sprite key={el} src={el}/>;
               return ""
             })}
           </div>
